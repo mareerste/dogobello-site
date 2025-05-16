@@ -3,6 +3,7 @@
   text-align: center;
   background-color: #fff;
   opacity: 0;
+  color: #0B1F40;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }

@@ -1,7 +1,8 @@
 .problem-solution {
+  background-color: #fff;
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #fff;
+  will-change: opacity, transform;
   color: #0B1F40;
   opacity: 0;
   transform: translateY(30px);
