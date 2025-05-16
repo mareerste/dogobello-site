@@ -1,0 +1,56 @@
+.quality-promise {
+  background: linear-gradient(to right, #0B1F40 0%, #08162f 100%);
+  color: #E0C075;
+  padding: 6rem 2rem;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.quality-promise.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quality-promise::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(224, 192, 117, 0.02) 0%, transparent 70%);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.quality-promise h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.quality-promise p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUpSection {
+  from { opacity: 0; transform: translateY(30px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}

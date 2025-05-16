@@ -1,0 +1,29 @@
+.problem-solution {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff;
+  color: #0B1F40;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.problem-solution.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.problem-solution h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.problem-solution p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.problem-solution h3 {
+  font-size: 1.8rem;
+  color: #E0C075;
+}
