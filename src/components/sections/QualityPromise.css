@@ -6,14 +6,6 @@
   font-family: 'Playfair Display', serif;
   position: relative;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.quality-promise.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .quality-promise::before {
@@ -29,11 +21,29 @@
   z-index: 0;
 }
 
+.quality-promise h2,
+.quality-promise p {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.quality-promise.visible h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quality-promise.visible p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
 .quality-promise h2 {
   font-size: 2.8rem;
   margin-bottom: 1.5rem;
-  position: relative;
-  z-index: 1;
 }
 
 .quality-promise p {
@@ -41,16 +51,4 @@
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  position: relative;
-  z-index: 1;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeUpSection {
-  from { opacity: 0; transform: translateY(30px) scale(0.98); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
 }

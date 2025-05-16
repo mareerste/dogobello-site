@@ -2,14 +2,20 @@
   background-color: #fff;
   padding: 4rem 2rem;
   text-align: center;
-  will-change: opacity, transform;
   color: #0B1F40;
+}
+
+.problem-solution h2,
+.problem-solution p,
+.problem-solution h3 {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.problem-solution.visible {
+.problem-solution.visible h2,
+.problem-solution.visible p,
+.problem-solution.visible h3 {
   opacity: 1;
   transform: translateY(0);
 }
@@ -22,9 +28,11 @@
 .problem-solution p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  transition-delay: 0.2s;
 }
 
 .problem-solution h3 {
   font-size: 1.8rem;
   color: #E0C075;
+  transition-delay: 0.4s;
 }

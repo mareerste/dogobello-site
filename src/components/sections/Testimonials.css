@@ -2,36 +2,35 @@
   padding: 4rem 2rem;
   text-align: center;
   background-color: #fff;
-  opacity: 0;
   color: #0B1F40;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.testimonials.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .testimonials h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.testimonials.visible h2 {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .testimonial {
   margin-bottom: 2rem;
   opacity: 0;
-  transform: translateX(-30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.testimonials.visible .testimonial:nth-child(2) {
+.testimonials.visible .testimonial:nth-of-type(1) {
   transform: translateX(-30px);
   opacity: 1;
   transition-delay: 0.2s;
 }
 
-.testimonials.visible .testimonial:nth-child(3) {
+.testimonials.visible .testimonial:nth-of-type(2) {
   transform: translateX(30px);
   opacity: 1;
   transition-delay: 0.4s;
@@ -46,16 +45,4 @@
   font-size: 1rem;
   color: #0B1F40;
   margin-top: 1rem;
-}
-
-.testimonial:nth-child(2) {
-  transform: translateX(30px);
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeSlide {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }

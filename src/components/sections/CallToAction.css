@@ -9,14 +9,6 @@
   border-top: 1px solid rgba(224, 192, 117, 0.08);
   border-bottom: 1px solid rgba(224, 192, 117, 0.05);
   box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.03);
-  transform: translateY(30px);
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.call-to-action.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .call-to-action::before {
@@ -32,15 +24,14 @@
   opacity: 0.5;
 }
 
-.call-to-action h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1.2rem;
-  font-family: 'Playfair Display', serif;
+.call-to-action h2,
+.call-to-action p,
+.call-to-action button {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
   position: relative;
   z-index: 1;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
 }
 
 .call-to-action.visible h2 {
@@ -48,19 +39,27 @@
   transform: translateY(0);
 }
 
-.call-to-action p {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
-  position: relative;
-  z-index: 1;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease 0.2s, transform 1s ease 0.2s;
-}
-
 .call-to-action.visible p {
   opacity: 1;
   transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.call-to-action.visible button {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.call-to-action h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.call-to-action p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
 }
 
 .call-to-action button {
@@ -73,32 +72,8 @@
   border: none;
   font-weight: 600;
   letter-spacing: 0.05rem;
-  position: relative;
-  z-index: 1;
   box-shadow: 0 8px 24px rgba(224, 192, 117, 0.3);
-  transform: translateY(20px);
-  opacity: 0;
-  transition: opacity 1s ease 0.4s, transform 1s ease 0.4s, box-shadow 0.4s ease;
-}
-
-.call-to-action.visible button {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.call-to-action button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 180%;
-  height: 180%;
-  background: radial-gradient(circle, rgba(224, 192, 117, 0.05) 0%, transparent 80%);
-  border-radius: 50%;
-  z-index: -1;
-  filter: blur(20px);
-  opacity: 0.4;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
 }
 
 .call-to-action button::after {
@@ -119,26 +94,4 @@
 .call-to-action button:hover {
   transform: translateY(-3px);
   box-shadow: 0 16px 40px rgba(224, 192, 117, 0.4);
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeUpSection {
-  from {
-    opacity: 0;
-    transform: translateY(30px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
 }
