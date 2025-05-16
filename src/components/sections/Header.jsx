@@ -27,7 +27,7 @@ const Header = () => {
       </div>
       <header className={`dogobello-header ${hideTopBar ? "sticky" : ""}`}>
         <div className="logo">
-          <img src="/logo.PNG" alt="Dogobello Logo" />
+          <img src="./logo.PNG" alt="Dogobello Logo" />
           DOGGOBELLO
         </div>
         <nav className={menuOpen ? "open" : ""}>
